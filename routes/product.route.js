@@ -3,8 +3,6 @@ const express = require('express');
 const router = express.Router();
 const Joi = require('joi');
 
-//let username = process.env.username_mogodb;
-//let password = process.env.password_mongodb;
 const url = process.env.MONGODB_URI ? process.env.MONGODB_URI : "mongodb://localhost:27017"
 const dbName = process.env.MONGODB_URI ? "heroku_2wh2qzqj" : "test"
 
