@@ -28,7 +28,6 @@ router.post('/', (req, res) => {
         //validation should be done here!
         const new_seizure = {
             seizure_date: req.body.date,
-            seizure_time: req.body.time,
             seizure_begin: req.body.begin,
             seizure_type: req.body.type,
             seizure_severity: req.body.severity,
