@@ -27,11 +27,11 @@ router.post('/', (req, res) => {
     dbClient.connect().then(() => {
         //validation should be done here!
         const new_seizure = {
-            seizure_date: req.body.date,
-            seizure_begin: req.body.begin,
-            seizure_type: req.body.type,
-            seizure_severity: req.body.severity,
-            others: req.body.other
+            seizure_date: req.body.seizure_date,
+            seizure_begin: req.body.seizure_begin,
+            seizure_type: req.body.seizure_type,
+            seizure_severity: req.body.seizure_severity,
+            others: req.body.others
         }
         dbClient.db(dbName).collection("seizures").insertOne(new_seizure).then((r) => {
             res.status(200).send("success ")
