@@ -28,7 +28,7 @@ router.post('/', (req, res) => {
         //validation should be done here!
         const new_data = {
             date: req.body.date,
-            data_type: req.body.data_type,
+            type: req.body.type,
             value: req.body.value
         }
         dbClient.db(dbName).collection("healthData").insertOne(new_data).then((r) => {
