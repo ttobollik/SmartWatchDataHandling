@@ -5,7 +5,7 @@ const Joi = require('joi');
 
 //let username = process.env.username_mogodb;
 //let password = process.env.password_mongodb;
-const url = "mongodb://localhost:27017";
+const url = process.env.MONGODB_URI ? process.env.MONGODB_URI : "mongodb://localhost:27017"
 
 //getting all objects in DB
 router.get('/', (req, res) => {
